@@ -10,3 +10,12 @@ salt-master:
     - enable: True
     - watch:
       - file: /etc/salt/master.d/10-gitfs.conf
+
+/etc/ferm/ports.d/saltmaster.conf:
+  file.managed:
+    - source: salt://base/ferm-port.conf
+    - user: root
+    - group: root
+    - mode: 0644
+    - context:
+        tcp-ports: [4505, 4506]
