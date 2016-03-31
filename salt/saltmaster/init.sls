@@ -17,5 +17,6 @@ salt-master:
     - user: root
     - group: root
     - mode: 0644
+    - template: jinja
     - context:
         tcp-ports: [4505, 4506]
