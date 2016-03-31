@@ -14,6 +14,7 @@ ferm:
     - enable: True
     - watch:
       - file: /etc/ferm/ferm.conf
+      - file: /etc/ferm/ports.d
 
 /etc/ferm/ferm.conf:
   file.managed:
