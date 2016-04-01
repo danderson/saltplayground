@@ -1,3 +1,5 @@
 #!/bin/bash
 
-pwd
+salt-run fileserver.update
+salt '*' state.apply
+
