@@ -1,3 +1,6 @@
+python-git:
+  pkg.installed: []
+
 /etc/salt/master.d/10-gitfs.conf:
   file.managed:
     - source: salt://saltmaster/10-gitfs.conf
